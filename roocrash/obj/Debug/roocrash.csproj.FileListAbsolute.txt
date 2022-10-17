@@ -11,3 +11,7 @@ C:\Users\User\source\repos\roocrash\roocrash\obj\Debug\roocrash.csproj.CoreCompi
 C:\Users\User\source\repos\roocrash\roocrash\obj\Debug\roocrash.csproj.CopyComplete
 C:\Users\User\source\repos\roocrash\roocrash\obj\Debug\roocrash.exe
 C:\Users\User\source\repos\roocrash\roocrash\obj\Debug\roocrash.pdb
+C:\Users\User\source\repos\roocrash\roocrash\obj\Debug\roocrash.Form2.resources
+C:\Users\User\source\repos\roocrash\roocrash\obj\Debug\roocrash.Form2.dje-NE.resources
+C:\Users\User\source\repos\roocrash\roocrash\obj\Debug\dje-NE\roocrash.resources.dll
+C:\Users\User\source\repos\roocrash\roocrash\bin\Debug\dje-NE\roocrash.resources.dll
