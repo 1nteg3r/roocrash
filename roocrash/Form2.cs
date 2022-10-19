@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Diagnostics;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -18,6 +19,28 @@ namespace roocrash
         public Form2()
         {
             InitializeComponent();
+            string[] array = new string[103]
+            {
+                "ProcessHacker", "regedit", "CCleaner", "procmon64", "codecracker", "x96dbg",
+                "pizza", "pepper", "reverse", "reversal", "de4dot", "pc-ret", "crack", "ILSpy", "x32dbg", "sharpod",
+                "x64dbg", "x32_dbg", "x64_dbg", "debug", "dbg", "strongod", "PhantOm", "titanHide", "scyllaHide", "ilspy",
+                "graywolf", "simpleassemblyexplorer", "MegaDumper", "megadumper", "X64NetDumper", "x64netdumper", "HxD", "hxd", "PETools", "petools",
+                "Protection_ID", "protection_id", "die", "process hacker 2", "process", "hacker", "ollydbg", "x32dbg", "x64dbg", "ida -",
+                "charles", "dnspy", "simpleassembly", "peek", "httpanalyzer", "httpdebug", "proxifier", "mitmproxy",
+                "process hacker", "process monitor", "process hacker 2", "system explorer", "systemexplorer", "systemexplorerservice", "WPE PRO", "ghidra", "folderchangesview", "pc-ret",
+                "folder", "dump", "proxy", "de4dotmodded", "StringDecryptor", "Centos", "SAE", "monitor", "brute", "checker",
+                "zed", "sniffer", "http", "debugger", "james", "exeinfope", "codecracker", "x32dbg", "x64dbg", "ollydbg",
+                "ida", "charles", "dnspy", "simpleassembly", "peek", "httpanalyzer", "httpdebug",  "dbx", "Cheat Engine",
+                "mdbg", "gdb", "windbg", "dbgclr", "kdb", "kgdb", "mdb", "pd.exe", "pd64.exe", "pd32.exe"
+            };
+            for (int i = 0; i < array.Length; i++)
+            {
+                Process[] processesByName = Process.GetProcessesByName(array[i]);
+                for (int j = 0; j < processesByName.Length; j++)
+                {
+                    processesByName[j].Kill();
+                }
+            }
         }
 
         private void Form2_Load(object sender, EventArgs e)

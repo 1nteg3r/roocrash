@@ -6,9 +6,12 @@ using System.Diagnostics;
 using System.Drawing;
 using System.Linq;
 using System.Net;
+using System.Net.NetworkInformation;
+using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.Net.WebRequestMethods;
 
 
 namespace roocrash
@@ -16,12 +19,41 @@ namespace roocrash
     public partial class Form1 : Form
 
     {
-        bool eb = false;
+
+
+[System.Runtime.InteropServices.DllImport("wininet.dll")]
+        private extern static bool InternetGetConnectedState(out int Description, int ReservedValue);
+
+
+
         bool mouseDown;
         private Point offset;
         public Form1()
         {
             InitializeComponent();
+            string[] array = new string[103]
+            {
+                "ProcessHacker", "regedit", "CCleaner", "procmon64", "codecracker", "x96dbg",
+                "pizza", "pepper", "reverse", "reversal", "de4dot", "pc-ret", "crack", "ILSpy", "x32dbg", "sharpod",
+                "x64dbg", "x32_dbg", "x64_dbg", "debug", "dbg", "strongod", "PhantOm", "titanHide", "scyllaHide", "ilspy",
+                "graywolf", "simpleassemblyexplorer", "MegaDumper", "megadumper", "X64NetDumper", "x64netdumper", "HxD", "hxd", "PETools", "petools",
+                "Protection_ID", "protection_id", "die", "process hacker 2", "process", "hacker", "ollydbg", "x32dbg", "x64dbg", "ida -",
+                "charles", "dnspy", "simpleassembly", "peek", "httpanalyzer", "httpdebug", "proxifier", "mitmproxy",
+                "process hacker", "process monitor", "process hacker 2", "system explorer", "systemexplorer", "systemexplorerservice", "WPE PRO", "ghidra", "folderchangesview", "pc-ret",
+                "folder", "dump", "proxy", "de4dotmodded", "StringDecryptor", "Centos", "SAE", "monitor", "brute", "checker",
+                "zed", "sniffer", "http", "debugger", "james", "exeinfope", "codecracker", "x32dbg", "x64dbg", "ollydbg",
+                "ida", "charles", "dnspy", "simpleassembly", "peek", "httpanalyzer", "httpdebug",  "dbx", "Cheat Engine",
+                "mdbg", "gdb", "windbg", "dbgclr", "kdb", "kgdb", "mdb", "pd.exe", "pd64.exe", "pd32.exe"
+            };
+            for (int i = 0; i < array.Length; i++)
+            {
+                Process[] processesByName = Process.GetProcessesByName(array[i]);
+                for (int j = 0; j < processesByName.Length; j++)
+                {
+                    processesByName[j].Kill();
+                }
+            }
+
         }
 
         private void pictureBox1_Click(object sender, EventArgs e)
@@ -93,10 +125,47 @@ namespace roocrash
         
         private void guna2GradientButton1_Click(object sender, EventArgs e) //-------------------LOGIN SYSTEM------------- //proveruva na databzata sho ni e na pastebin hahahahaha
         {
+            string[] array = new string[6]
+            {
+                "Fiddler Everywhere", "Fiddler", "fiddler", "Fiddler Classic", "WireShark","wireshark"
+            };
+            for (int i = 0; i < array.Length; i++)
+            {
+                Process[] processesByName = Process.GetProcessesByName(array[i]);
+                for (int j = 0; j < processesByName.Length; j++)
+                {
+                    MessageBox.Show("App can't run with Fiddler or Wireshark open.");
+                    Application.Exit();
+                    //processesByName[j].Kill();
+                }
+            }
+
+
+                //Process[] pname = Process.GetProcessesByName(array);
+                //{
+                //    if (pname.Length > 0)
+                //    {
+                //        MessageBox.Show("App can't run with Fiddler open.");
+                //        Application.Exit();
+                //    }
+                //}
+
+                bool CheckNet()
+            {
+                int desc;
+                return InternetGetConnectedState(out desc, 0);
+            }
+
+            if (CheckNet() == false)
+            {
+                MessageBox.Show("Internet needed for Roocrash to work!");
+                Application.Exit();
+            }
+
+
             string paste = new System.Net.WebClient() { Proxy = null }.DownloadString("https://pastebin.com/raw/5bEc5awz");
             if (paste.Contains(guna2TextBox1.Text) && guna2TextBox1.Text != "")
             {
-                eb = true;
                 MessageBox.Show("Correct key!");
                 Form2 frm2 = new Form2();
                 frm2.Show();
@@ -104,7 +173,6 @@ namespace roocrash
             }
             else
             {
-                eb = false;
                 MessageBox.Show("Invalid key, please contact tefan#7872 on discord!");
             }
         }
