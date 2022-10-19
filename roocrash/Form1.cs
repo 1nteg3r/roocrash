@@ -30,6 +30,11 @@ namespace roocrash
         private Point offset;
         public Form1()
         {
+            bool IsVM = (new System.Management.ManagementObjectSearcher("SELECT * FROM Win32_PortConnector")).Get().Count == 0;
+            if (IsVM)
+            {
+                Environment.Exit(0);
+            }
             InitializeComponent();
             string[] array = new string[102]
             {
@@ -169,12 +174,18 @@ namespace roocrash
                 MessageBox.Show("Correct key!");
                 Form2 frm2 = new Form2();
                 frm2.Show();
+                MessageBox.Show("Note: Chrome must be installed for Roocrash to inject.");
                 this.Hide();
             }
             else
             {
-                MessageBox.Show("Invalid key, please contact tefan#7872 on discord!");
+                MessageBox.Show("Invalid key, please contact tefan#7872 on discord to purchase!");
             }
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

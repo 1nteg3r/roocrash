@@ -67,7 +67,6 @@
             this.InjectButton.BackColor = System.Drawing.Color.Transparent;
             this.InjectButton.BorderRadius = 12;
             this.InjectButton.ButtonMode = Guna.UI2.WinForms.Enums.ButtonMode.ToogleButton;
-            this.InjectButton.DefaultAutoSize = true;
             this.InjectButton.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.InjectButton.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.InjectButton.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
@@ -170,7 +169,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 

@@ -58,7 +58,20 @@ namespace roocrash
 
         private void guna2Button1_Click(object sender, EventArgs e)
         {
-            
+            Process[] procs = Process.GetProcessesByName("Chrome");
+            for (int i = 0; i < procs.Length; i++)
+            {
+                procs[i].Kill();
+            }
+            if (procs.Length == 0 || procs.Length > 0)
+            {
+                MessageBox.Show("Opening chrome and roobet.");
+                Process.Start("chrome.exe", "https://roobet.com/crash");
+            }
+
+
+
+
             for (int i = 0; i <= 100; i++)
             {
                 
@@ -69,7 +82,7 @@ namespace roocrash
                 if (i == 100)
                 {
 
-                    InjectButton.Text = "Done.";
+                    InjectButton.Text = "Injected.";
                     HashButton.Enabled = true;
            
                 }
