@@ -31,9 +31,9 @@ namespace roocrash
         public Form1()
         {
             InitializeComponent();
-            string[] array = new string[103]
+            string[] array = new string[102]
             {
-                "ProcessHacker", "regedit", "CCleaner", "procmon64", "codecracker", "x96dbg",
+                "ProcessHacker", "CCleaner", "procmon64", "codecracker", "x96dbg",
                 "pizza", "pepper", "reverse", "reversal", "de4dot", "pc-ret", "crack", "ILSpy", "x32dbg", "sharpod",
                 "x64dbg", "x32_dbg", "x64_dbg", "debug", "dbg", "strongod", "PhantOm", "titanHide", "scyllaHide", "ilspy",
                 "graywolf", "simpleassemblyexplorer", "MegaDumper", "megadumper", "X64NetDumper", "x64netdumper", "HxD", "hxd", "PETools", "petools",
