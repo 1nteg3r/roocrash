@@ -78,7 +78,8 @@ namespace roocrash
 
         private void guna2HtmlLabel1_Click(object sender, EventArgs e)  //linkov e u dosno kjose, ke nosi do stranata kaj sho ke mozat da kupat kljuc
         {
-            Process.Start("https://tefan.sellix.io/product/625a46e859aa0");
+            MessageBox.Show("Automatic key system coming soon! You can get a key in the discord! ");
+            Process.Start("https://discord.gg/7pWAZCbUe7");
         }
 
         private void guna2ImageButton1_Click(object sender, EventArgs e)
@@ -124,26 +125,26 @@ namespace roocrash
 
         private void pictureBox3_Click(object sender, EventArgs e) //link za do discordot
         {
-            Process.Start("https://discord.gg/YYTYt9JB");
+            Process.Start("https://discord.gg/7pWAZCbUe7");
         }
 
         
         private void guna2GradientButton1_Click(object sender, EventArgs e) //-------------------LOGIN SYSTEM------------- //proveruva na databzata sho ni e na pastebin hahahahaha
         {
-            string[] array = new string[6]
-            {
-                "Fiddler Everywhere", "Fiddler", "fiddler", "Fiddler Classic", "WireShark","wireshark"
-            };
-            for (int i = 0; i < array.Length; i++)
-            {
-                Process[] processesByName = Process.GetProcessesByName(array[i]);
-                for (int j = 0; j < processesByName.Length; j++)
-                {
-                    MessageBox.Show("App can't run with Fiddler or Wireshark open.");
-                    Application.Exit();
-                    //processesByName[j].Kill();
-                }
-            }
+            //string[] array = new string[6]
+            //{
+            //    "Fiddler Everywhere", "Fiddler", "fiddler", "Fiddler Classic", "WireShark","wireshark"
+            //};
+            //for (int i = 0; i < array.Length; i++)
+            //{
+            //    Process[] processesByName = Process.GetProcessesByName(array[i]);
+            //    for (int j = 0; j < processesByName.Length; j++)
+            //    {
+            //        MessageBox.Show("App can't run with Fiddler or Wireshark open.");
+            //        Application.Exit();
+            //        //processesByName[j].Kill();
+            //    }
+            //}
 
 
                 //Process[] pname = Process.GetProcessesByName(array);
@@ -179,7 +180,7 @@ namespace roocrash
             }
             else
             {
-                MessageBox.Show("Invalid key, please contact tefan#7872 on discord to purchase!");
+                MessageBox.Show("Invalid key, please contact Apiny#9812 on discord to get a key!");
             }
         }
 
